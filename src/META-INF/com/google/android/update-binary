@@ -470,7 +470,7 @@ fi;
 
 ui_print " ";
 ui_print "Mounting...";
-if $bootmode && [ "$KSU" = true ]; then
+if $bootmode && ( [ "$KSU" = true ] || [ "$APATCH" = true ] ); then
   rootpart="/data";
   modulesdir="$(dirname "$MODPATH")";
   root="$MODPATH";
